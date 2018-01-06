@@ -1,0 +1,18 @@
+<dl ng-repeat="val in data.value.promise" id='{{$index}}'>
+    <div class="col-xs-1">
+        <input type="checkbox" ng-model="val.isCheck" ng-click="checkC(val.isCheck)">
+    </div>
+    <dt class="col-xs-1">
+                <img ng-src="{{val.image}}" alt="">
+            </dt>
+    <dd class="col-xs-7">
+        <h2>{{val.name}}</h2>
+        <h4>{{val.price | currency:"¥"}}</h4>
+    </dd>
+    <div class="col-xs-3">
+        <span class="fa fa-plus" ng-click="plus($index)"></span>
+        <input type="text" style="width: 30px;display: inline-block;" ng-model="val.count">
+        <span class="fa fa-minus" ng-click="minus($index)"></span>
+        <span class="fa" ng-click="clost($index)">删除</span>
+    </div>
+</dl>

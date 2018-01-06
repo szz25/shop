@@ -1,0 +1,58 @@
+<div ng-controller="main">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        
+        .box {
+            width: 100%;
+        }
+        
+        dl {
+            width: 100%;
+            height: 80px;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 0px;
+            padding-top: 15px;
+            clear: both;
+        }
+        
+        h2 {
+            font-size: 16px;
+            margin-top: 0;
+        }
+        
+        h4 {
+            color: red;
+        }
+        
+        .btn {
+            width: 100%;
+            border-bottom: 1px solid #ccc;
+            text-align: left;
+        }
+        
+        .fa {
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+        
+        input {
+            text-align: center;
+        }
+    </style>
+    <div class="box">
+        <div class="btn">
+            <input type="checkbox" ng-model="checked" ng-click="check()">
+        </div>
+        <product></product>
+        <div>
+            <h5>合计金额：{{amount | currency:"¥"}}</h5>
+            <h5>合计数量：{{total}}</h5>
+        </div>
+    </div>
+
+</div>
